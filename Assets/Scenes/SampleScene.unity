@@ -1778,6 +1778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1835828977}
   - component: {fileID: 1835828978}
+  - component: {fileID: 1835828979}
   m_Layer: 0
   m_Name: CubeSpawner
   m_TagString: Untagged
@@ -1812,8 +1813,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8cd2c69bfb5ba445bd1aacb88a2cb9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cubePrefab: {fileID: 3884964733365977885, guid: 74a04753c94d6714da093b4472edb5cd, type: 3}
   _playerInput: {fileID: 1258086585}
+--- !u!114 &1835828979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835828976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e587c46894d4c24e826146faaa776e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectPrefab: {fileID: 3884964733365977885, guid: 74a04753c94d6714da093b4472edb5cd, type: 3}
 --- !u!1 &1980275888
 GameObject:
   m_ObjectHideFlags: 0

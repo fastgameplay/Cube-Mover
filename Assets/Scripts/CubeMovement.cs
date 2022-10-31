@@ -13,11 +13,13 @@ public class CubeMovement : MonoBehaviour{
         _speed = speed;
         _distance = distance;
         _startPos = _currentPos;
+        gameObject.SetActive(true);
+
     }
 
     void Update(){
         if(Vector3.Distance(_startPos,_currentPos) > _distance){
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         Movement();
     }

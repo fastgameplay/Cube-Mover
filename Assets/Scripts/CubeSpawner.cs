@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CubeSpawner : MonoBehaviour{
-    [SerializeField] GameObject _cubePrefab;
     [SerializeField] PlayerInput _playerInput;
     private float _distance = 30;
     private float _speed = 2;
@@ -13,10 +12,12 @@ public class CubeSpawner : MonoBehaviour{
     }
 
     IEnumerator SpawnCubes(float delay){
+        GameObject tmp;
         while (true){
             yield return new WaitForSeconds(delay);
-            Instantiate(_cubePrefab, transform.position, Quaternion.identity)
-                .GetComponent<CubeMovement>().SetUp(_speed,_distance);
+            tmp = ObjectPool.Instance.GetPooledObject();
+            tmp.transform.position = transform.position;
+            tmp.GetComponent<CubeMovement>().SetUp(_speed,_distance);
         }
     }
 
